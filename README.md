@@ -47,4 +47,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Google MAps API
 
-run: npm install @vis.gl/react-google-maps
+run: `npm install @vis.gl/react-google-maps`
