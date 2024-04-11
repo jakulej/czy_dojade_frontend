@@ -45,6 +45,6 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-## Google MAps API
+## Google Maps API
 
 run: `npm install @vis.gl/react-google-maps`
