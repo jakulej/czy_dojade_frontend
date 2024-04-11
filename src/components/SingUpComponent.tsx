@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {SingUpDTO} from "../DTOs/SingUpDTO";
 
-export const RouteComponent: React.FC = () => {
+export const SingUpComponent: React.FC = () => {
     const [singUp, setSingUp] = useState<SingUpDTO | null>(null);
 
     useEffect(() => {
