@@ -4,6 +4,7 @@ import './App.css';
 import Home from "./components/Home";
 import Component from "./components/Component";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import MapComponent from "./components/MapComponent";
 
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
         <Routes>
             <Route path={"/"} element={<Home/>}/>
             <Route path={"/component"} element={<Component
+            />}/>
+            <Route path={"/map"} element={<MapComponent
             />}/>
         </Routes>
       </BrowserRouter>
