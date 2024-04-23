@@ -1,4 +1,4 @@
-export interface AccidentDTO {
+export type AccidentDTO = {
     id: number;
     time_of_accident: string;//time type - to fix
     acc_latitude: number;

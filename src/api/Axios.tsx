@@ -1,0 +1,1 @@
+export const baseURL: string = 'jdbc:postgresql://localhost:5432/czy_dojade';
