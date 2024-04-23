@@ -1,7 +1,7 @@
-export interface StopTimeDTO {
+export type StopTimeDTO = {
     id: number;
     arrival_time: string;//time type - to fix
     departure_time: string;//time type - to fix
-    stopDTO: number;
-    tripDTO: number;
+    stop_id: number;
+    trip_id: number;
 }
