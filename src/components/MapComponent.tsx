@@ -2,7 +2,7 @@
 
 import {APIProvider, Map, AdvancedMarker, Pin, InfoWindow} from '@vis.gl/react-google-maps';
 import {useState} from "react";
-import {apiKey} from "./API_KEY";
+import {apiKey} from "../API_KEY";
 
 export default function MapComponent() {
     const position = {lat: 53.54992, lng: 10.00678};

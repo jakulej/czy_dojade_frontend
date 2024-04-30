@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Home from "./api/Home";
+import Home from "./components/Home";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import MapComponent from "./MapComponent";
+import MapComponent from "./components/MapComponent";
 
 import AccidentListComponent from "./components/Accident/AccidentListComponent";
 import AccidentComponent from "./components/Accident/AccidentComponent";
