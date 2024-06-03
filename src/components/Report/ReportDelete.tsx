@@ -1,19 +1,19 @@
-import {SingUpDTO} from "../../DTOs/SingUpDTO";
+import {ReportDTO} from "../../DTOs/ReportDTO";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {baseURL} from "../../api/Axios";
 import {useParams} from "react-router-dom";
 
-export default function SingUpComponent () {
+export default function ReportComponent () {
 
-    const [singUp, setSingUp] = useState<SingUpDTO | null>();
+    const [report, setReport] = useState<ReportDTO | null>();
     const {id} = useParams();
 
     useEffect(() => {
         axios
-            .get(baseURL + 'sing-up/' + id)
+            .get(baseURL + 'report/' + id)
             .then((response) => {
-                setSingUp(response.data);
+                setReport(response.data);
                 console.log(response);
             })
             .catch(error => console.log(error));
@@ -22,27 +22,27 @@ export default function SingUpComponent () {
 
     return (
         <div>
-            <h1>Sing Up</h1>
+            <h1>Report</h1>
             <div>
                 <table>
                     <thead>
                     <tr>
-                        <th>id: </th>
-                        <th>: </th>
-                        <th>: </th>
-                        <th>: </th>
-                        <th>: </th>
+                        <th>id:</th>
+                        <th>time_of_report:</th>
+                        <th>description:</th>
+                        <th>username:</th>
+                        <th>accident_id:</th>
                     </tr>
                     <tbody>
                     {
-                        singUp
+                        report
                             ?
                             <tr>
-                                <td>{singUp.email}</td>
-                                <td>{singUp.first_name}</td>
-                                <td>{singUp.last_name}</td>
-                                <td>{singUp.password}</td>
-                                <td>{singUp.username}</td>
+                                <td>{report.id}</td>
+                                <td>{report.time_of_report}</td>
+                                <td>{report.description}</td>
+                                <td>{report.username}</td>
+                                <td>{report.accident_id}</td>
                             </tr>
                             : null
                     }

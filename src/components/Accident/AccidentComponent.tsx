@@ -3,7 +3,6 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import {baseURL} from "../../api/Axios";
 import {useParams} from "react-router-dom";
-import AccidentListComponent from "./AccidentListComponent";
 
 export default function AccidentComponent () {
 
@@ -29,11 +28,11 @@ export default function AccidentComponent () {
                     <thead>
                     <tr>
                         <th>id:</th>
-                        <th>:</th>
-                        <th>:</th>
-                        <th>:</th>
-                        <th>:</th>
-                        <th>:</th>
+                        <th>time_of_accident:</th>
+                        <th>acc_latitude:</th>
+                        <th>acc_longitude:</th>
+                        <th>is_verified:</th>
+                        <th>tripDTO:</th>
                     </tr>
                     <tbody>
                     {
@@ -44,8 +43,8 @@ export default function AccidentComponent () {
                                 <td>{accident.time_of_accident}</td>
                                 <td>{accident.acc_latitude}</td>
                                 <td>{accident.acc_longitude}</td>
-                                <td>{accident.tripDTO}</td>
                                 <td>{accident.is_verified}</td>
+                                <td>{accident.tripDTO}</td>
                             </tr>
                             : null
                     }

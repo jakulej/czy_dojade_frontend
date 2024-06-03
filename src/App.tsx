@@ -1,21 +1,16 @@
 import React from 'react';
 import './App.css';
-import Home from "./components/Home";
+import HomeMap from "./HomeMap";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import MapComponent from "./components/MapComponent";
 
 import AccidentListComponent from "./components/Accident/AccidentListComponent";
 import AccidentComponent from "./components/Accident/AccidentComponent";
-
-import LoginComponent from "./components/Login/LoginComponent";
 
 import ReportListComponent from "./components/Report/ReportListComponent";
 import ReportComponent from "./components/Report/ReportComponent";
 
 import RouteListComponent from "./components/Route/RouteListComponent";
 import RouteComponent from "./components/Route/RouteComponent";
-
-import SingUpComponent from "./components/SingUp/SingUpComponent";
 
 import StopListComponent from "./components/Stop/StopListComponent";
 import StopComponent from "./components/Stop/StopComponent";
@@ -38,21 +33,16 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-            <Route path={"/"} element={<Home/>}/>
-            <Route path={"/map"} element={<MapComponent/>}/>
+            <Route path={"/"} element={<HomeMap/>}/>
 
             <Route path={"/accidents"} element={<AccidentListComponent/>}/>
             <Route path={"/accident/:id"} element={<AccidentComponent/>}/>
-
-            <Route path={"/login/:id"} element={<LoginComponent/>}/>
 
             <Route path={"/reports"} element={<ReportListComponent/>}/>
             <Route path={"/report/:id"} element={<ReportComponent/>}/>
 
             <Route path={"/routes"} element={<RouteListComponent/>}/>
             <Route path={"/route/:id"} element={<RouteComponent/>}/>
-
-            <Route path={"/sing-up/:id"} element={<SingUpComponent/>}/>
 
             <Route path={"/stops"} element={<StopListComponent/>}/>
             <Route path={"/stop/:id"} element={<StopComponent/>}/>

@@ -1,0 +1,18 @@
+.filter-button2{
+    height: 32px;
+    width: 200px;
+    margin: 20px 0 0 0;
+    text-align: left;
+    background: white;
+    border: 0;
+    border-radius: 8px 8px 8px 8px;
+    transform: translate3d(40px, 0, 0);
+}
+
+#filter-eye{
+    float: right;
+}
+
+.filter-text2{
+    margin: 0 0 0 10px;
+}

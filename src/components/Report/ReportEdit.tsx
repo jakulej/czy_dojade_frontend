@@ -1,19 +1,19 @@
-import {LoginDTO} from "../../DTOs/LoginDTO";
+import {ReportDTO} from "../../DTOs/ReportDTO";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {baseURL} from "../../api/Axios";
 import {useParams} from "react-router-dom";
 
-export default function LoginComponent () {
+export default function ReportComponent () {
 
-    const [login, setLogin] = useState<LoginDTO | null>();
+    const [report, setReport] = useState<ReportDTO | null>();
     const {id} = useParams();
 
     useEffect(() => {
         axios
-            .get(baseURL + 'login/' + id)
+            .get(baseURL + 'report/' + id)
             .then((response) => {
-                setLogin(response.data);
+                setReport(response.data);
                 console.log(response);
             })
             .catch(error => console.log(error));
@@ -22,24 +22,27 @@ export default function LoginComponent () {
 
     return (
         <div>
-            <h1>User</h1>
+            <h1>Report</h1>
             <div>
                 <table>
                     <thead>
                     <tr>
                         <th>id:</th>
-                        <th>:</th>
-                        <th>:</th>
-                        <th>:</th>
-                        <th>:</th>
+                        <th>time_of_report:</th>
+                        <th>description:</th>
+                        <th>username:</th>
+                        <th>accident_id:</th>
                     </tr>
                     <tbody>
                     {
-                        login
+                        report
                             ?
                             <tr>
-                                <td>{login.email}</td>
-                                <td>{login.password}</td>
+                                <td>{report.id}</td>
+                                <td>{report.time_of_report}</td>
+                                <td>{report.description}</td>
+                                <td>{report.username}</td>
+                                <td>{report.accident_id}</td>
                             </tr>
                             : null
                     }

@@ -1,0 +1,10 @@
+.stop-list-divider{
+    height: 20px;
+    width: 2px;
+    background: black;
+    margin-left: 19px;
+}
+
+.stop-text{
+    margin: 8px 0 8px 0;
+}

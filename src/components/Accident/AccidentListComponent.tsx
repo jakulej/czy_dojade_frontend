@@ -26,11 +26,11 @@ export default function AccidentListComponent () {
                     <thead>
                     <tr>
                         <th>id:</th>
-                        <th>:</th>
-                        <th>:</th>
-                        <th>:</th>
-                        <th>:</th>
-                        <th>:</th>
+                        <th>time_of_accident:</th>
+                        <th>acc_latitude:</th>
+                        <th>acc_longitude:</th>
+                        <th>is_verified:</th>
+                        <th>tripDTO:</th>
                     </tr>
                     <tbody>
                     {
@@ -39,10 +39,10 @@ export default function AccidentListComponent () {
                                 <tr key={i}>
                                     <td>{accident.id}</td>
                                     <td>{accident.time_of_accident}</td>
-                                    <td>{accident.tripDTO}</td>
-                                    <td>{accident.is_verified}</td>
-                                    <td>{accident.acc_longitude}</td>
                                     <td>{accident.acc_latitude}</td>
+                                    <td>{accident.acc_longitude}</td>
+                                    <td>{accident.is_verified}</td>
+                                    <td>{accident.tripDTO}</td>
                                 </tr>
                             ))
                             : null
