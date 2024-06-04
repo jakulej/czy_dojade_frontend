@@ -1,0 +1,69 @@
+.settings-popup-background{
+    top: 0;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.40);
+}
+
+.settings-popup{
+    width: 480px;
+    background: #0055D4;
+    border-radius: 8px 8px 8px 8px;
+    text-align: center;
+}
+
+.settings-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exit-button{
+    background: #0055D4;
+    border: 0;
+    border-radius: 8px 8px 8px 8px;
+    position: absolute;
+    transform: translate3d(226px, -12px, 0);
+    height: 28px;
+    width: 28px;
+}
+
+.settings{
+    width: 480px;
+    background: white;
+    border-radius: 0 0 8px 8px;
+    color: black;
+}
+
+.settings-items{
+    height: 100vh;
+    background: white;
+}
+
+.settings-item-button1{
+    width: 100%;
+    padding: 0;
+    border: 0;
+    text-align: left;
+    background: white;
+    color: black;
+}
+
+.settings-item-button2{
+    width: 100%;
+    padding: 0;
+    border: 0;
+    text-align: left;
+    background: #0055D4;
+    color: white;
+}
+
+.settings-divider{
+    height: 1px;
+    width: 100%;
+    background: #8C8C8C;
+}

@@ -52,7 +52,7 @@
     align-items: center;
 }
 
-.logo-divider{
+.divider{
     height: 20px;
 }
 
@@ -85,4 +85,9 @@
 
 #underline{
     text-decoration: underline;
+}
+
+.help-button{
+    border: none;
+    background: white;
 }

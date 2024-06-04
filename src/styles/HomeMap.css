@@ -54,12 +54,22 @@
     background: white;
 }
 
-.menu-item-button{
+.menu-item-button1{
     width: 250px;
     padding: 0;
     border: 0;
     text-align: left;
     background: white;
+    color: black;
+}
+
+.menu-item-button2{
+    width: 250px;
+    padding: 0;
+    border: 0;
+    text-align: left;
+    background: #0055D4;
+    color: white;
 }
 
 .logout-item{
