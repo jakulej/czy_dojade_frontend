@@ -53,9 +53,9 @@ export default function HomeMap() {
                     <div className={'map-container'}>
                         <APIProvider apiKey={apiKey}>
                         <Map zoom={9} center={position}>
-                            <AdvancedMarker position={position} onClick={() => setOpen(true)}>
-                                <Pin></Pin>
-                            </AdvancedMarker>
+                            {/*<AdvancedMarker position={position} onClick={() => setOpen(true)}>*/}
+                            {/*    <Pin></Pin>*/}
+                            {/*</AdvancedMarker>*/}
                             {open &&
                                 <InfoWindow position={position} onCloseClick={() => setOpen(false)}>Pin</InfoWindow>}
                         </Map>

@@ -1,5 +1,6 @@
 import {LoginDTO} from "../DTOs/LoginDTO";
 import React, {useEffect, useState} from "react";
+import axiosInstance from '../api/Axios';
 import axios from "axios";
 import {baseURL} from "../api/Axios";
 import {useParams} from "react-router-dom";
@@ -65,8 +66,42 @@ function LoginRegisterComponent ({ onClose }: ModalProps) {
 
     const submitLoginHandler = (event: React.MouseEvent<HTMLElement>) => {
         event.preventDefault();
-        //     ... login
-    }
+        axiosInstance
+            .post(`token/`, {
+                email: loginForm.username,
+                password: loginForm.password,
+            })
+            .then((res) => {
+                localStorage.setItem('access_token', res.data.access);
+                localStorage.setItem('refresh_token', res.data.refresh);
+                axiosInstance.defaults.headers['Authorization'] =
+                    'JWT ' + localStorage.getItem('access_token');
+                // navigate('/');
+                window.location.reload();
+            })
+            .catch(function (error){
+                if (error.response) {
+                    // The request was made and the server responded with a status code
+                    // that falls out of the range of 2xx
+                    console.log(error.response.data);
+                    console.log(error.response.status);
+                    console.log(error.response.headers);
+                } else if (error.request) {
+                    // The request was made but no response was received
+                    // `error.request` is an instance of XMLHttpRequest in the browser
+                    // and an instance of http.ClientRequest in node.js
+                    console.log(error.request);
+                } else {
+                    // Something happened in setting up the request that triggered an Error
+                    console.log('Error', error.message);
+                }
+            });
+    };
+
+    // const submitLoginHandler = (event: React.MouseEvent<HTMLElement>) => {
+    //     event.preventDefault();
+    //     //     ... login
+    // }
 
     const submitRegisterHandler = (event: React.MouseEvent<HTMLElement>) => {
         event.preventDefault();
