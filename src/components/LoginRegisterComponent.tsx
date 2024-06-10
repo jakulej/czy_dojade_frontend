@@ -26,7 +26,7 @@ function LoginRegisterComponent ({ onClose }: ModalProps) {
     };
 
     const [loginForm, setLoginForm] = useState({
-        "username": '',
+        "email": '',
         "password": '',
     });
 
@@ -68,7 +68,7 @@ function LoginRegisterComponent ({ onClose }: ModalProps) {
         event.preventDefault();
         axiosInstance
             .post(`token/`, {
-                email: loginForm.username,
+                email: loginForm.email,
                 password: loginForm.password,
             })
             .then((res) => {
@@ -114,7 +114,7 @@ function LoginRegisterComponent ({ onClose }: ModalProps) {
     let re_password = /.{8,}/;
     const isPasswordCorrect = re_password.test(registerForm.password);
 
-    const buttonEnable = (loginForm.username !== '') && (loginForm.password !== '') && isEmailCorrect;
+    const buttonEnable = (loginForm.email !== '') && (loginForm.password !== '') && isEmailCorrect;
 
     return (
         <div>
@@ -141,13 +141,13 @@ function LoginRegisterComponent ({ onClose }: ModalProps) {
                         </div>
                         <div className={"divider"}></div>
                         <div>
-                            <label>Username</label>
+                            <label>Email</label>
                             <input className={"login-input"} type="text" name="email" id="email"
                                    aria-describedby="emailHelp"
-                                   value={loginForm.username} onChange={inputLoginHandler}/>
+                                   value={loginForm.email} onChange={inputLoginHandler}/>
                         </div>
                         {
-                            (loginForm.username !== '') ?
+                            (loginForm.email !== '') ?
                                 <p className={"text-danger"}>Email address is not correct!</p>
                                 :
                                 <p></p>
